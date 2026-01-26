@@ -1,0 +1,304 @@
+/* Reset básico e importação de fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    /* Fonte comum para devs */
+}
+
+body {
+    /* Fundo escuro com os pontos de luz azulados da imagem */
+    background-color: #0a0b1e;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(30, 30, 150, 0.3) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(50, 20, 100, 0.2) 0%, transparent 40%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+nav.navigation {
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+    padding: 8px 15px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+nav a:hover {
+    opacity: 0.7;
+    background-color: rgba(59, 82, 255, 0.1);
+}
+
+/* Conteúdo Principal */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Imagem de Perfil com Glow Blue */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 3px;
+    /* Espaço para a borda brilhar */
+    background: linear-gradient(135deg, #2b3cf0, #000);
+    box-shadow: 0 0 30px rgba(43, 60, 240, 0.4);
+    margin-bottom: 30px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Tipografia */
+h1 {
+    font-size: 3rem;
+    color: #3b52ff;
+    /* Azul vibrante da imagem */
+    text-shadow: 0 0 20px rgba(59, 82, 255, 0.3);
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    clear: both;
+}
+
+/* Ícones de Ferramentas */
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 30px 20px;
+    margin: 30px 0;
+    clear: both;
+}
+
+.icons img {
+    clear: both;
+    float: none !important;
+    padding: 0 !important;
+    display: inline-block;
+}
+
+/* Seções principais */
+header {
+    width: 100%;
+}
+
+.cabecalho {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linkedin {
+    width: 100%;
+    padding: 40px 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin h2 {
+    font-size: 2.5rem;
+    color: #3b52ff;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.linkedin p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.linkedin a {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #3b52ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.linkedin a:hover {
+    background-color: #2b3cf0;
+}
+
+.linkedin .navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.linkedin .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    width: 100%;
+}
+
+.pdf-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pdf-container iframe {
+    margin: 0 auto;
+}
+
+/* Seções GitHub e Contato - Mesmo padrão do LinkedIn */
+.linkedin,
+.github,
+.contato {
+    width: 100%;
+    padding: 40px 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, rgba(43, 60, 240, 0), rgba(59, 82, 255, 0.6), rgba(43, 60, 240, 0)) 1;
+}
+
+.linkedin {
+    border-top: 2px solid;
+    border-top-image: linear-gradient(90deg, rgba(43, 60, 240, 0), rgba(59, 82, 255, 0.6), rgba(43, 60, 240, 0)) 1;
+}
+
+.github>div,
+.contato>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.github h2,
+.contato h2 {
+    font-size: 2.5rem;
+    color: #3b52ff;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.github p,
+.contato p {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.github a,
+.contato a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #3b52ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.github a:hover,
+.contato a:hover {
+    background-color: #2b3cf0;
+}
