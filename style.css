@@ -192,12 +192,14 @@ p {
     font-size: 1.2rem;
     color: var(--text-secondary);
     font-weight: 300;
+    display: flex;
     letter-spacing: 1px;
     text-align: justify;
     margin: 20px auto;
     max-width: 800px;
     padding: 0 20px;
     clear: both;
+    justify-content: center;
 }
 
 /* Ícones de Ferramentas */
@@ -269,12 +271,19 @@ header {
     color: var(--accent-color);
     margin: 20px 1;
     text-align: center;
+    text-shadow: 0 0 20px rgba(43, 60, 240, 0.3);
 }
 
+.cabecalho p,
 .linkedin p,
 .github p,
 .contato p {
+    padding: 10px 20px;
     text-align: center;
+    text-align: justify;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 30px rgba(43, 60, 240, 0.4);
     margin: 20px 0;
 }
 
