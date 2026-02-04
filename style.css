@@ -17,8 +17,12 @@
     --accent-color: #3b52ff;
     --accent-hover: #2b3cf0;
     --border-color: rgba(59, 82, 255, 0.6);
-    --button-bg: rgba(40, 62, 226, 0.6);
+    --button-bg: rgba(7, 17, 92, 0.6);
     --button-hover: rgba(24, 41, 231, 0.6);
+    --link-bg-dark:rgba(11, 38, 121, 0.6);
+    --link-bg-dark-hover: var(--accent-color);
+    --link-bg: var(--link-bg-dark);
+    --link-bg-hover: var(--link-bg-dark-hover);
 }
 
 /* Variáveis de Tema - Claro */
@@ -30,19 +34,20 @@
     --text-secondary: #0a0a0a;
     --accent-color: #2b3cf0;
     --accent-hover: #1a2bc4;
-    --border-color: rgba(43, 60, 240, 0.3);
+    --border-color: rgba(180, 80, 200, 0.8);
     --button-bg: rgba(43, 60, 240, 0.7);
-    --button-hover: rgba(43, 60, 240, 0.9);
+    --button-hover: rgba(180, 80, 200, 0.6);
     --link-bg-light: rgba(180, 80, 200, 0.6);
     --link-bg-light-hover: rgba(180, 80, 200, 0.8);
 }
 
+/* Estilos Globais */
 body {
     /* Fundo escuro com os pontos de luz azulados da imagem */
     background-color: var(--bg-color);
     background-image:
-        radial-gradient(circle at 10% 20%, var(--bg-gradient-1) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, var(--bg-gradient-2) 0%, transparent 40%);
+    radial-gradient(circle at 10% 20%, var(--bg-gradient-1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, var(--bg-gradient-2) 0%, transparent 40%);
     color: var(--text-main);
     min-height: 100vh;
     display: flex;
@@ -88,6 +93,13 @@ nav.navigation {
     width: 100%;
 }
 
+.menu-top{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+
+}
 .menu {
     display: flex;
     flex-wrap: wrap;
@@ -100,8 +112,24 @@ nav.navigation {
     margin: 0;
 }
 
-.menu li {
+.menu li a {
     margin: 0;
+    text-decoration: none;
+        color: var(--text-main);
+        padding: 10px 20px;
+        border-radius: 12px;
+        font-weight: 500;
+        background-color: var(--link-bg);
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+        display: inline-block;
+}
+
+.menu li a:hover {
+    background-color: var(--link-bg-hover);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: var(--accent-color);
 }
 
 nav a {
@@ -298,6 +326,9 @@ header {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+    box-sizing: border-box;
 }
 
 .linkedin a:hover,
@@ -311,6 +342,7 @@ header {
 [data-theme="light"] .contato a {
     background-color: rgba(180, 80, 200, 0.5);
     color: var(--text-main);
+    box-shadow: 0 0 10px rgba(180, 80, 200, 0.5);
 }
 
 [data-theme="light"] .linkedin a:hover,
@@ -366,6 +398,7 @@ header {
 
 /* Botão de Alternância de Tema */
 .theme-toggle {
+
     cursor: pointer;
     background-color: var(--accent-color);
     color: white;
@@ -378,6 +411,7 @@ header {
 }
 
 .theme-toggle:hover {
+    filter: brightness(1.2);
     transform: scale(1.1);
     background-color: var(--accent-hover);
 }
